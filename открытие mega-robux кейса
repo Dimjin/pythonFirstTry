@@ -1,0 +1,32 @@
+import random
+import time
+
+# Определяем возможные награды
+rewards = [
+    "50rb",
+    "55rb",
+    "60rb",
+    "65rb",
+    "70rb",
+    "75rb",
+    "80rb",
+    "85rb",
+    "90rb",
+    "95rb",
+    "100rb!!!"
+]
+
+def open_case():
+    print("Открываем robux кейс...")
+    time.sleep(2)  # Задержка для эффекта ожидания
+    reward = random.choice(rewards)
+    print(f"Поздравляем! Вы получили: {reward}")
+
+# Запускаем открытие кейса
+if __name__ == "__main__":
+    while True:
+        open_case()
+        again = input("Хотите открыть еще один кейс? (да/нет): ").strip().lower()
+        if again != 'да':
+            print("Спасибо за игру!")
+            break
